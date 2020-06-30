@@ -1,1 +1,2 @@
-INSERT INTO `Linh_test_people` VALUES (1,'linh',1,1,'col_2','col_3'),(2,'linh 2',2,1,'col_2','col_3');
+INSERT INTO `Linh_test_computer` VALUES (1,'1',1,'col_2','col_3'),(2,'2',1,'col_2','col_3'),(3,'3',1,'col_2','col_3'),(4,'4',1,'col_2','col_3');
+INSERT INTO `Linh_test_people` VALUES (1,'linh',1,1,'col_2','col_3'),(2,'linh 2',2,1,'col_2','col_3'),(3,'linh 3',3,1,'col_2','col_3'),(4,'linh 4',4,1,'col_2','col_3');

@@ -32,10 +32,11 @@ public class TestSpecs{
 
     public static Specification<People> joinSpec() {
         return (root, query, criteriaBuilder) -> {
-            Join<People, Computer> versionJoin = root.join("peopleComputer");
-//                    .join("peopleComputerCol1");
-            versionJoin.on(criteriaBuilder.isNotNull(versionJoin.get("computerCol2")));
-            return criteriaBuilder.isNotNull(versionJoin.get("peopleComputer"));
+            Join<People, Computer> versionJoin = root
+                    .join("peopleComputer");
+//                    .join("peopleComputer1");
+//            versionJoin.on(criteriaBuilder.isNotNull(versionJoin.get("computerCol2")));
+            return criteriaBuilder.isNotNull(versionJoin.get("peopleComputer1"));
         };
     }
 }

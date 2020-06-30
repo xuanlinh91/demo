@@ -13,7 +13,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Entity
 @Table(name = "Linh_test_people")
-@ToString(exclude = { "peopleComputer"})
+@ToString(exclude = { "peopleComputer1"})
 public class People {
     @Id
     @Column(name = "id")
@@ -22,8 +22,8 @@ public class People {
     @Column(name = "name")
     private String name;
 
-//    @Column(name = "people_col_1")
-//    private Integer peopleCol1;
+    @Column(name = "people_col_1")
+    private Integer peopleCol1;
 
 //    @Column(name = "people_col_2")
 //    private String peopleCol2;
@@ -41,4 +41,9 @@ public class People {
 //            @JoinColumn(name="people_col_3", referencedColumnName="computer_col_3")
 //    })
     private Computer peopleComputer;
+
+//    @OneToOne(cascade = CascadeType.ALL)
+//    @JsonManagedReference
+//    @JoinColumn(name = "people_col_1", referencedColumnName = "computer_col_1")
+//    private Computer peopleComputer1;
 }

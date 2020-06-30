@@ -7,14 +7,15 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
 @Table(name = "Linh_test_computer")
-@ToString(exclude = { "peopleComputer"})
-public class Computer {
+@ToString(exclude = { "peopleComputer1"})
+public class Computer implements Serializable {
     @Id
     @Column(name = "id")
     private Integer id;
@@ -37,7 +38,11 @@ public class Computer {
 //    @JsonBackReference
     private String computerCol3;
 
-    @OneToOne(mappedBy = "peopleComputer")
+//    @OneToOne(mappedBy = "peopleComputer")
+//    @JsonBackReference
+//    private People peopleComputer;
+
+    @OneToOne(mappedBy = "peopleComputer1")
     @JsonBackReference
-    private People peopleComputer;
+    private People peopleComputer1;
 }
